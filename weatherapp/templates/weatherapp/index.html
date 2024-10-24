@@ -1,0 +1,63 @@
+{% extends 'weatherapp/base.html' %}
+
+{% block content %}
+
+{% if request.user.is_authenticated %}
+    
+<div class="container py-2">
+    <h1 class="text-white text-center custom-border-radius">Weather App</h1>
+
+    <div class="messages">
+        {% if messages %}
+            {% for message in messages %}
+            <p class="message text-center alert alert-{{ message.tags }}">
+                {% if message.level == messages.ERROR %}Important: {% endif %}
+                {{ message }}
+            </p>
+            {% endfor %}
+        {% endif %}
+    </div>
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            <input type="text" class="form-control bg-warning text-white border-secondary" placeholder="Şehir adı giriniz.." aria-label="Recipient's username" aria-describedby="button-addon2" name="name">
+            <button class="btn btn-outline-secondary bg-info text-white" type="submit" id="button-addon2">Add City</button>
+        </div>
+    </form>
+    
+</div>
+<div class="container py-2 ">
+    <div class="row row-cols-4 row-cols-md-3 g-4">
+        {% comment %} {% for i in city_data reversed %} {% endcomment %}
+        {% for i in city_data %}
+            <div class="col-sm-4 ">
+                <div class="card card text-center rounded-4 custom-card">
+                    <div class="card-body p-6 ">
+                        {{i.city}} <br>
+                        {{i.temp}}&#8451<br>
+                        <img src="http://openweathermap.org/img/wn/{{i.icon}}@2x.png" alt=""> <br>
+                        {{i.desc}} <br>
+                        <a href="{% url 'weatherapp:delete' i.city.id %}" class="btn btn-danger btn-sm text-white text-decoration-none mt-2">Delete</a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% else %}
+
+<div class="container">
+    <div class="row justify-content-center m-5">
+        <div class="col-md-6 text-center">
+            <h2 class="p-3 custom-border-radius">Wellcome <span class="text-danger">Guest!</span>  Please login app.</h2>
+        </div>
+    </div>
+</div>
+
+
+
+{% endif %} 
+
+{% endblock content %}

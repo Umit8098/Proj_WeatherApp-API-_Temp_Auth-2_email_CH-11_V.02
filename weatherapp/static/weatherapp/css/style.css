@@ -1,0 +1,73 @@
+* {
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 88px;
+}
+
+h1 {
+    background-color: #129791;
+    color: #ffffff; /* İstediğin rengi buraya gir */
+}
+
+h2 {
+    background-color: #129791;
+    color: #ffffff; /* İstediğin rengi buraya gir */
+}
+
+h3 {
+    background-color: #129791;
+    color: #ffffff; /* İstediğin rengi buraya gir */
+}
+
+.full-page {
+    background-color: rgba(52, 58, 64, 0.75); /* bg-dark with 75% opacity */
+}
+
+/* Genel kaydırma çubuğu stilleri */
+::-webkit-scrollbar {
+    width: 8px; /* Scrollbar genişliği */
+    height: 8px; /* Yatay scrollbar varsa genişlik */
+}
+
+/* Scrollbar arka planı */
+::-webkit-scrollbar-track {
+    background: rgba(216, 201, 201, 0.75); /* bg-dark ile uyumlu */
+    border-radius: 10px;
+}
+
+/* Scrollbar tutacağı (thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #6f98c2; /* text-dark ile uyumlu */
+    border-radius: 10px;
+    border: 2px solid transparent; /* Daha ince görünmesi için kenarlık */
+}
+
+/* Hover durumu için scrollbar thumb */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #d2e4f7; /* Hover sırasında koyulaşma */
+}
+
+.help-text, .form-text {
+    color: #aaaaaa;           /* Metni beyaz yapalım */
+    font-size: 1rem;       /* Yazı boyutunu artırıyoruz */
+    font-weight: bold;     /* Yazı kalın olsun */
+    /*background-color: rgba(66, 77, 88, 0.75); /*Arka plana hafif siyah transparan ekleyelim*/
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.custom-card {
+    background-color: #495057; /* Daha açık bir koyu gri ton */
+    color: white; /* Metin rengini beyaz yap */
+}
+
+
+.custom-border-radius {
+    border-radius: 10px; /* İstediğiniz değer */
+    /*background-color: rgba(0, 0, 0, 0.5); /* Arka plan rengi eklemek isteyebilirsiniz */
+    padding: 10px; /* İç boşluk */
+}
