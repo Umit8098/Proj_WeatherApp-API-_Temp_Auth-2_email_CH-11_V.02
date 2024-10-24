@@ -2320,6 +2320,22 @@ git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Rent_A_Car_A
 - pip install -r requirements.txt
 ```
 
+- Eğer paketlerden bir veya birkaçı için şöyle bir hata alınırsa;
+```bash
+No matching distribution found for Django==5.1.1 (from -r requirements.txt (line 3))
+```
+
+- Paketin upgrade versiyonunu yüklüyoruz. Bazen pythoneanywhere paketleri geriden takip edebiliyor. ugrade yapınca aslında bize göre önceki versiyonlarından ancak kendisine göre en güncel versiyonlarından birini yüklüyor.
+```bash
+- pip install django --upgrade
+```
+
+- Daha sonra pip freeze yapıp geri kalan paketleri manuel olarak versiyonları ile birlikte yükleyebiliriz.
+```bash
+- pip install crispy-bootstrap5==2024.2
+- django-crispy-forms==2.3
+```
+
   - pythonanywhere -> dashboard -> Web -> Add a new web app -> next -> Manual configuration (including virtualenvs) -> Python 3.10 (python versionu) -> next
         All done! Your web app is now set up. Details below. 
         (Hepsi tamam! Web uygulamanız artık kuruldu. Detaylar aşağıda.)
@@ -2336,9 +2352,9 @@ git clone https://github.com/Umit8098/Project_Django_Rest_Framework_Rent_A_Car_A
 
 
 - Source code: -> bash terminalde app in olduğu klasör içerisinde iken, "pwd" yazıp klasörün yolunu görebiliyoruz.
-        /home/umit8105/Project_Django_Templates_Todo_App_FB_Authantication-1_CH-11
+        /home/umit8107/Proj_WeatherApp-API-_Temp_Auth-2_email_CH-11_V.02
 - Working directory: -> Source code kısmına yazdığımız yolu buraya da yazıyoruz.
-        /home/umit8105/Project_Django_Templates_Todo_App_FB_Authantication-1_CH-11
+        /home/umit8107/Proj_WeatherApp-API-_Temp_Auth-2_email_CH-11_V.02
 - WSGI configuration file: Manuel configuration yaptığımız için bu WSGY (Web Server Gateway Interface) configuration u da kendimiz yapacağız. django application ile server arasındaki iletişimi sağlayan gateway. Bunda ayarlar yapmalıyız. sağ tıklayıp new tab ile yeni pencerede açıyoruz, Default olarak farmeworklerin ayar template leri var. 74-89 satırları arasında django kısmı var. Bunun haricindeki herşeyi siliyoruz, sadece django ile ilgili kısım kalıyor. İlk iki satır hariç yorumdan kurtarıyoruz.
 
 ```py
@@ -2364,13 +2380,13 @@ application = get_wsgi_application()
 - path kısmında bize manage.py ın yolunu vermemizi istiyor. Aslında source code umuzun olduğu path, biraz önce "pwd" ile almıştık, "/home/umit8103/Project_Django_Rest_Framework_Stock_App_CH-13". Bunu path değişkenine tanımlıyoruz. Yani manage.py ımız bu klasörün içinde bunu söylüyoruz.
 
 ```py
-path = '/home/umit8104/Project_Django_Rest_Framework_Rent_A_Car_App_CH-12'
+path = '/home/umit8107/Proj_WeatherApp-API-_Temp_Auth-2_email_CH-11_V.02'
 ```
 
 - os.environ['DJANGO_SETTINGS_MODULE'] = 'mysite.settings'  -> settings klasörümüzün bulunduğu yeri belirtiyoruz. Bizim settings klasörümüz core in altında. buraya 'core.settings' yazıyoruz.
 
 ```py
-os.environ['DJANGO_SETTINGS_MODULE'] = 'main.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'weather.settings'
 ```
 
 
