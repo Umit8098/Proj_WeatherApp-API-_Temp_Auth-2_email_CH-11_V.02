@@ -32,7 +32,7 @@
 
 ## Overview
 - Weather App
-![screenshot](project_screenshot/Weather_App_Temp.gif)
+![screenshot](project_screenshot/Weather_App_Temp_2.gif)
 
 ---
 
