@@ -6,21 +6,19 @@
 <div align="center">
   <h3>
     <a href="https://umit8107.pythonanywhere.com/">
-      Demo
+      🖥️ Live Demo
     </a>
      | 
     <a href="https://umit8107.pythonanywhere.com/">
-      Project
+      📂 Project
     </a>
  
   </h3>
 </div>
 
-<!-- TABLE OF CONTENTS -->
 
-## Table of Contents
+## Navigation
 
-- [Table of Contents](#table-of-contents)
 - [Overview](#overview)
 - [Built With](#built-with)
 - [How To Use](#how-to-use)
@@ -34,7 +32,6 @@
 - Weather App
 ![screenshot](project_screenshot/Weather_App_Temp_2.gif)
 
----
 
 ## Built With
 
@@ -55,12 +52,6 @@ To clone and run this application, you'll need [Git](https://github.com/Umit8098
 When installing the required packages in the requirements.txt file, review the package differences for windows/macOS/Linux environments. 
 
 Complete the installation by uncommenting the appropriate package.
-
----
-
-requirements.txt dosyasındaki gerekli paketlerin kurulumu esnasında windows/macOS/Linux ortamları için paket farklılıklarını inceleyin. 
-
-Uygun olan paketi yorumdan kurtararak kurulumu gerçekleştirin.
 
 ```bash
 # Clone this repository
@@ -94,9 +85,6 @@ API_KEY =123456789abcdefg...
 ## About This Project
 - It is a Fullstack weather application prepared with the Django Framework template structure and using https://openweathermap.org/ APIs.
 
-<hr>
-
-- Django Framework şablon yapısıyla hazırlanmış, https://openweathermap.org/ API'lerini kullanan Fullstack bir hava durumu uygulamasıdır.
 
 ## Acknowledgements
 - [Bootstrap5](https://getbootstrap.com/) - CSS framework
